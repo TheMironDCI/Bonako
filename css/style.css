@@ -363,7 +363,7 @@ section {
 }
 @media (max-width: 768px) {
   #sakkizinchi .sakkiz_box2 {
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
   }
 }
@@ -382,7 +382,7 @@ section {
 }
 @media (max-width: 768px) {
   #sakkizinchi .sakkiz_box2 .sak_btn1 {
-    width: 380px;
+    width: 280px;
   }
 }
 #sakkizinchi .sakkiz_box2 .sak_btn2 {

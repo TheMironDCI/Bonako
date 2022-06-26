@@ -367,7 +367,7 @@ section {
         border-radius: 10px;
         background-color: #cfc3ff;
         @include mobile{
-            width: 400px;
+            width: 300px;
             margin: 0 auto;
         }
         .sak_btn1{
@@ -383,7 +383,7 @@ section {
             top: 10px;
             left: 10px;
             @include mobile{
-                width: 380px;
+                width: 280px;
             }
         }
         .sak_btn2{
