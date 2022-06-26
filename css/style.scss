@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+$buttoncolor:#896EFF;
+$buttoncolor2:#EBE7FF;
+$boxshadov1:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$boxshadov2:rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+$background1:#F6F9FF;
+$background2:#F9F8FF;
+$background3:#A58DFF;
+$background4:#ECF6FD;
+$h1:#202571;
+$paragrif:#8C8C8C;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+section {
+    margin: 100px 0 ;
+    padding: 50px 0 !important;
+}
+@mixin mobile{
+    @media (max-width:768px){
+        @content;
+    }
+}
+
+#birinchi{
+    margin: 0 !important;
+    padding: 0 !important;
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 255, 255, 0.509);
+        width: 100%;
+        height: auto;
+        z-index: 100;
+        .navbar{
+            .btn{
+                width: 120px;
+                height: 35px;
+                background-color:#42D897;
+                border-radius: 5px;
+                color: white;
+                border: none;
+                transition: .3s;
+                &:hover{
+                    background-color: #4e0808;
+                    color: white;
+                }
+                @include mobile {
+                    display: none;
+                }
+            }
+            .hamburger {
+                display: none;
+                cursor: pointer;
+                @include mobile {
+                    display: block;
+                }
+            }
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            @include mobile{
+               
+            }
+        }
+        .menu{
+           ul{
+            display: flex;
+            list-style: none;
+            color: black;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0 !important;
+            width: 100%;
+
+            li{
+                @include mobile{
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 18px;
+                    padding: 15px 15px;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.573);
+                        color: white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+           }
+        }
+    }
+}
+#ikkinchi{
+    background-color: $background2;
+    margin: 0 !important;
+    .ikkinchi_box{
+        margin-top: 80px;
+        h1{
+            padding: 15px 0;
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+        }
+        button{
+            margin-top: 20px;
+            border: none;
+            background-color: $buttoncolor;
+            color: white;
+            width: 150px;
+            height: 35px;
+            border-radius: 8px;
+            transition: .3s;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.215);
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+#uchunchi{
+    background-color: $background4;
+    img{
+        padding: 50px 0;
+    }
+    .uch_border{
+        width: 90px;
+        height: 3px;
+        background-color: red;
+        margin: 0 auto;
+    }
+}
+#tortinchi{
+    background-color: $background1;
+    .tort_boshsahifa{
+        text-align: center;
+        margin-top: 70px;
+        button{
+            background-color: $buttoncolor2;
+            color:$buttoncolor ;
+            width: 140px;
+            height: 35px;
+            border-radius: 7px;
+            border: none;
+            transition: .3s;
+            &:hover{
+                background-color: wheat;
+            }
+        }
+        h2{
+            color: $h1;
+            margin-top: 15px;
+        }
+        p{
+          color: $paragrif;
+        }
+    }
+    .tort_box{
+        width: 350px;
+        height: 290px;
+        border-radius: 20px;
+        box-shadow:$boxshadov1;
+        background-color: white;
+        background-image: url(../img/core-img/cards-bg.png);
+        background-position: center;
+        @include mobile{
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        h3{
+            padding: 20px 10px;
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+            padding: 0 10px;
+        }
+        img{
+            padding:10px;
+        }
+    }
+}
+#beshinchi{
+    background-color: $background1;
+    .besh_img{
+        margin-top: 60px;
+        img{
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+    .besh_box{
+        margin-top: 80px;
+        .besh_btn1{
+            width: 120px;
+            height: 35px;
+            background-color: $buttoncolor2;
+            border-radius: 7px;
+            border: none;
+            color: blueviolet;
+            margin-bottom: 10px;
+            transition: .3s;
+            &:hover{
+                background-color: wheat;
+            }
+        }
+        h2{
+            color: $h1;
+            padding: 10px;
+        }
+        button{
+            width: 140px;
+            height: 45px;
+            background-color: $buttoncolor;
+            border-radius: 7px;
+            border: none;
+            color: white;
+            transition: .3s;
+            position: relative;
+            top: 20px;
+            &:hover{
+                background-color: grey;
+            }
+        }
+    }
+}
+#oltinchi{
+    background-color: $background1;
+    .besh_img{
+        margin-top: 60px;
+        img{
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+    .besh_box{
+        margin-top: 80px;
+        .besh_btn1{
+            width: 120px;
+            height: 35px;
+            background-color: $buttoncolor2;
+            border-radius: 7px;
+            border: none;
+            color: blueviolet;
+            margin-bottom: 10px;
+            transition: .3s;
+            &:hover{
+                background-color: wheat;
+                box-shadow: $boxshadov2;
+            }
+        }
+        h2{
+            color: $h1;
+            padding: 10px;
+        }
+        button{
+            width: 140px;
+            height: 45px;
+            background-color: $buttoncolor;
+            border-radius: 7px;
+            border: none;
+            color: white;
+            transition: .3s;
+            position: relative;
+            top: 20px;
+            &:hover{
+                background-color: grey;
+            }
+        }
+    }
+}
+#yettinchi{
+        background-color: $background1;
+        .besh_img{
+            margin-top: 60px;
+            img{
+                @include mobile{
+                    width: 100%;
+                }
+            }
+        }
+        .besh_box{
+            margin-top: 80px;
+            .besh_btn1{
+                width: 120px;
+                height: 35px;
+                background-color: $buttoncolor2;
+                border-radius: 7px;
+                border: none;
+                color: blueviolet;
+                margin-bottom: 10px;
+                transition: .3s;
+                &:hover{
+                    background-color: wheat;
+                    box-shadow: $boxshadov2;
+                }
+            }
+            h2{
+                color: $h1;
+                padding: 10px;
+            }
+            button{
+                width: 140px;
+                height: 45px;
+                background-color: $buttoncolor;
+                border-radius: 7px;
+                border: none;
+                color: white;
+                transition: .3s;
+                position: relative;
+                top: 20px;
+                &:hover{
+                    background-color: grey;
+                }
+            }
+        }
+}
+#sakkizinchi{
+    background-color:#A58EFF ;
+    img{
+        width: 90%;
+        padding: 20px;
+    }
+    .sakkiz_box{
+        margin-top: 60px;
+        .sak_btn{
+            width: 120px;
+            height: 35px;
+            background-color: $buttoncolor2;
+            color: blueviolet;
+            border: none;
+            border-radius: 7px;
+            transition: .3s;
+            &:hover{
+                background-color:white;
+                box-shadow: $boxshadov2;
+            }
+        }
+        h2{
+            color: whitesmoke;
+            padding: 20px 0;
+        }
+        p{
+            color: whitesmoke;
+        }
+    }
+    .sakkiz_box2{
+        width: 600px;
+        height: 130px;
+        border-radius: 10px;
+        background-color: #cfc3ff;
+        @include mobile{
+            width: 400px;
+            margin: 0 auto;
+        }
+        .sak_btn1{
+            width: 580px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: white;
+            text-align: start;
+            color: black;
+            margin: 0 auto;
+            border: none;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            @include mobile{
+                width: 380px;
+            }
+        }
+        .sak_btn2{
+            position: relative;
+            top: 30px;
+            left: 20px;
+            width: 150px;
+            height: 40px;
+            background-color: $buttoncolor;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: .3s;
+            &:hover{
+                background-color: white;
+                box-shadow: $boxshadov1;
+                color: black;
+            }
+        }
+    }
+}
+#toqqiz{
+    background-color: $background1;
+    .toqqiz_boshsahifa{
+        text-align: center;
+        margin-top: 55px;
+        h3{
+            margin-top: 15px;
+            color: $h1;
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+        }
+        button{
+            width: 130px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            background-color: $buttoncolor2;
+            color: blueviolet;
+            &:hover{
+                background-color: white;
+                box-shadow: $boxshadov2;
+            }
+        }
+    }
+    .toqqiz_box{
+        margin-top: 40px;
+        text-align: center;
+        width: 350px;
+        height: 350px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: white;
+        .btn-9 {
+            margin-bottom: 20px !important;
+        }
+        @include mobile{
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        img{
+            width: 100%;
+        }
+        p{
+            color: $paragrif;
+        }
+    }
+}
+#oninchi{
+    background-color: $background1;
+    .toqqiz_boshsahifa{
+        text-align: center;
+        margin-top: 55px;
+        h3{
+            margin-top: 15px;
+            color: $h1;
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+        }
+        button{
+            width: 130px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            background-color: $buttoncolor2;
+            color: blueviolet;
+            &:hover{
+                background-color: white;
+                box-shadow: $boxshadov2;
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .on_box{
+        width: 600px;
+        height: 125px;
+        background-color: $background1;
+        box-shadow: $boxshadov2;
+        margin: 25px 0;
+        display: flex;
+        @include mobile{
+            width: 100%;
+            border-radius: 7px;
+        }
+        .on_icon{
+            font-size: 30px;
+            position: relative;
+            top: 40px;
+            left: 10px;
+            color: blue;
+        }
+    }
+    .on_box1{
+        position: relative;
+        top: 30px;
+        left: 20px;
+        b{
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+            padding: 0 15px;
+        }
+    }
+}
+#onbir{
+    background-color: $background4;
+    .onbir_boshsaxifa{
+        text-align: center;
+        margin-top: 55px;
+        h3{
+            margin-top: 15px;
+            color: $h1;
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+        }
+        button{
+            width: 130px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            background-color: $buttoncolor2;
+            color: blueviolet;
+            &:hover{
+                background-color: white;
+                box-shadow: $boxshadov2;
+            }
+        }
+    } 
+    .oninchi_shadow{
+        text-align: center;
+        width: 350px !important;
+        height: 400px;
+        background-color: white;
+        box-shadow: $boxshadov2;
+        border-radius: 5px;
+        @include mobile{
+            margin: 0 auto;
+        }
+    }
+    .onbir_box{
+        text-align: center;
+        padding: 25px 0;
+        h1{
+            color: $h1;
+        }
+        ul{
+            list-style: none;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        li{
+            padding: 5px 0;
+        }
+        button{
+            width: 130px;
+            height: 35px;
+            background-color: $buttoncolor;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            transition: .3s;
+            &:hover{
+                background-color: white;
+                color: black;
+                box-shadow: $boxshadov2;
+
+            }
+        }
+    }   
+}
+#onikki{
+    background-color: $background2;
+    .onikki_boshsaxifa{
+        text-align: center;
+        margin-top: 55px;
+        h3{
+            margin-top: 15px;
+            color: $h1;
+            color: $h1;
+        }
+        p{
+            color: $paragrif;
+        }
+        button{
+            width: 130px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            background-color: $buttoncolor2;
+            color: blueviolet;
+            &:hover{
+                background-color: white;
+                box-shadow: $boxshadov2;
+            }
+        }
+    }
+    .onikki_box{
+        text-align: center;
+        width: 600px;
+        height: 250px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: $boxshadov2;
+        @include mobile{
+            width: 100%;
+            height: auto;
+        }
+        img{
+            width: 80px;
+            border-radius: 50%;
+            padding: 10px 0;
+        }
+        p{
+            color: $paragrif;
+        }
+    }
+    .box_onikkiicon{
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        display: flex;
+        padding: 20px 0;
+        .icon{
+            background-color: white;
+            color: black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 8px;
+        }
+        .icon2{
+            background-color: #42D897;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 8px;
+        }
+    } 
+}
+#onuch{
+    background-color: $background2;
+    .onuch1{
+        width: 1200px;
+        height: 160px;
+        background-color: #4B55F7;
+        display: flex;
+        margin: 0 auto;
+        .onuch_box{
+            color: white;
+            padding: 40px 15px;
+            h3{
+                color: $paragrif;
+            }
+        }
+        .onuch_box2{
+            button{
+                width: 140px;
+                height: 40px;
+                background-color: #FB585A;
+                color: white;
+                border: none;
+                border-radius: 7px;
+                position: relative;
+                top: 65px;
+                left: 400px;
+                transition: .3s;
+                @include mobile{
+                    width: 110%;
+                    position: relative;
+                    left: 6px;
+                }
+                &:hover{
+                    background-color:wheat;
+                    box-shadow: $boxshadov1;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+#ontort{background-image:url();
+    background-color: $background2;
+    .ontort_box{
+        align-items: center;
+        display: flex;
+    }
+    .ontort_box1{
+        margin-top: 20px;
+    }
+    .ontortinchi_icon{
+        display: flex;
+        .ontort_iconcha{
+            width: 40px;
+            height: 40px;
+            margin: 0 6px;
+            background-color:#42D897;
+            color: white;
+            
+            i{
+                font-size: 26px;
+                position: relative;
+                top: 6px;
+                left: 6px;
+            }
+        }
+
+    }
+    .ontort_logo{
+        padding: 80px 0;
+    }
+    .ulli{
+        padding: 80px 0;
+        b{
+            @include mobile{
+                color: white;
+            }
+        }
+        b{
+            margin-left: 29px;
+            color: rgb(0, 0, 0);
+        }
+        ul{
+            list-style: none;
+            li{
+                margin: 8px 0;
+            }
+        }
+    }
+}
+@include mobile{
+    .navbar{
+        .menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: auto !important;
+            background-color: rgba(15, 101, 104, 0.447);
+            display: block !important;
+            top: -100%;
+            transition:.4s;
+             ul{
+                display: block !important;
+                text-align: center;
+                padding-left: 0 !important;
+                a{
+                    color: white;
+                }
+            }
+            .btn{
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
+        .hamburger{
+            display: block;
+            font-style: 24px !important;
+        }
+    }
+    .active{
+        top: 75px !important;
+    }
+}
